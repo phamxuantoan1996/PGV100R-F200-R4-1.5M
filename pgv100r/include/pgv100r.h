@@ -19,7 +19,8 @@ private:
     uint64_t datamatrix;
 
     bool connectToPVG(void);
-    
+    uint8_t calculateCRC(uint8_t *buffer);
+    uint64_t decodeResponse(uint8_t *buffer);
     
 public:
     pgv100r(string port_serial,uint32_t baudrate);
